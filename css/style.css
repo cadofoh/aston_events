@@ -1,0 +1,276 @@
+/*
+Author: Chief Adofoh
+Student Number: 200189635
+*/
+
+/* Style Sheet for All Pages */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*GENERAL BASE STYLES*/
+
+html, body {
+    font-family: 'Noto Sans JP', 'Poppins', sans-serif;
+    color: #111;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 50px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+}
+
+.welcome-message h3 {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    padding: 100px;
+    margin-top: 50px;
+}
+
+section.home {
+    margin-top: 0;
+    flex-direction: row;
+    /* background-color:rgba(128, 0, 128, 0.4) */
+}
+
+/* Discover Events Button*/
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    background: purple;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 20px 0;
+    border: 0;
+}
+
+/*Button Animation*/
+
+.btn:hover {
+    transform: scale(.98);
+}
+
+/*Aston Logo*/
+
+.aston-logo {
+    position: absolute;
+    font-size: 60px;
+    font-weight: 600;
+    left: 60px;
+    top: 30px;
+    z-index: 20;
+    cursor: pointer;
+}
+
+/* Hamburger Icon*/
+
+.toggle {
+    position: fixed;
+    right: 0;
+    width: 60px;
+    top: 0;
+    height: 60px;
+    background: #800080 url(../images/menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: purple url(../images/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*Navigation Menu*/
+
+.navigation {
+    position: fixed;
+    height: 100%;
+    left: 100%;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation.active {
+    left: 0;
+}
+
+.navigation ul {
+    position: relative;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+.navigation ul li a {
+    color: black;
+    font-size: 50px;
+    font-family: 'Poppins', 'Noto Sans JP';
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.navigation ul li a:hover {
+    color: purple;
+}
+
+.navigation .social-bar {
+    position: absolute;
+    width: 60px;
+    left: 0;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .social-bar a {
+    display: inline-block;
+}
+
+.navigation .email-icon {
+    position: absolute;
+    bottom: 20px;
+}
+
+/*Main page Content*/
+
+.home-content {
+    position: relative;
+    z-index: 10;
+    max-width: 500px;
+}
+
+.home-img {
+    position: absolute;
+    width: 890px;
+    right: 5px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+@media(max-width:1400px) {
+    .home-img {
+        display: none;
+    }
+}
+
+/*Login Page*/
+
+.background {
+    background: white;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.div-center {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 1em 2em;
+    border-bottom: 2px solid #ccc;
+    display: table;
+}
+
+div.content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*Events Page*/
+
+.headers h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.sport-events, .culture-events, .other-events {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sport-events .category1, .culture-events .category2, .other-events .category3 {
+    padding: 30px;
+}
+
+.sport-events .category1 .e_icon img, .culture-events .category2 .e_icon img, .other-events .category3 .e_icon img {
+    max-width: 200px
+}
+
+.sport-events .category1:hover, .culture-events .category2:hover, .other-events .category3:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sport-events ul, .culture-events ul, .other-events ul {
+    font-size: 20px;
+    font-family: 'Poppins';
+    list-style-type: none;
+}
+
+.sport-events h2 {
+    padding-bottom: 20px;
+}
+
+.sport-events ul li, .culture-events ul li, .other-events ul li {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+@media(max-width:900px) {
+    .sport-events, .culture-events, .other-events {
+        grid-template-columns: 1fr;
+    }
+}
